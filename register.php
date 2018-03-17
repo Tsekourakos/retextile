@@ -66,7 +66,7 @@
     $stmt->execute([$id]);
     $newuser = $stmt -> fetch(PDO::FETCH_ASSOC);
     // $userargs = $idarray+$userargs;
-    echo json_encode($newuser);
+    echo json_encode($newuser, JSON_UNESCAPED_UNICODE );
     // echo $id;
     // $response = array('id' =>);
     // echo "{\"error\": \"".$passwordErr."\"}";
