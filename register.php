@@ -2,11 +2,11 @@
     header('Content-Type: application/json');
     header('Access-Control-Allow-Origin: *');
     require_once './login_db.php';
-    // $name = $_POST['name'];
-    // $surname = $_POST['surname'];
-    // $address = $_POST['address'];
-    // $zip_code = $_POST['zip_code'];
-    // $afm = $_POST['post'];
+    $name = (isset($_POST['name']) ? $_POST['name'] : "");
+    $surname = (isset($_POST['surname']) ? $_POST['surname'] : "");
+    $address = (isset($_POST['address']) ? $_POST['address'] : "");
+    $zip_code = (isset($_POST['zip_code']) ? $_POST['zip_code'] : "");
+    $afm = (isset($_POST['afm']) ? $_POST['afm'] : "");
     $email = (isset($_POST['email']) ? $_POST['email'] : "");
     $pwd = (isset($_POST['pwd']) ? $_POST['pwd'] : "");
     $pwd2 = (isset($_POST['pwd2']) ? $_POST['pwd2'] : "");
@@ -36,18 +36,39 @@
 
     }else {
          $passwordErr = "Not Valid Password ".$pwd;
+         echo "{\"error\": \"".$passwordErr."\"}";
+         exit;
     }
 
-    $loginquery = "SELECT * FROM `login` WHERE `email`= ?";
-    $stmt->execute($email);
+    $emailcheck = "SELECT * FROM `login` WHERE `email`= ?";
+    $stmt = $dbConnection->prepare($emailcheck);
+    $stmt->execute([$email]);
     $result1 = $stmt -> fetch(PDO::FETCH_ASSOC);
-    if(!$result1) {
+    if($result1) {
         $emailErr = "Email already exists";
         echo "{\"error\": \"".$emailErr."\"}";
         exit;
     }
 
-    
+    $createuser = "INSERT INTO users(name, surname, address, zip_code, afm) VALUES (?, ?, ?, ?, ? )";
+    $stmt = $dbConnection->prepare($createuser);
+    $userargs = [$name, $surname, $address, $zip_code, $afm];
+    $stmt->execute($userargs);
+    $id = $dbConnection->lastInsertId();
+
+    $createlogin = "INSERT INTO login(users_id, email, password) VALUES(?, ?, ? )";
+    $stmt = $dbConnection->prepare($createlogin);
+    $loginargs = [$id, $email, $pwd];
+    $stmt -> execute($loginargs);
+
+    $getuser = "SELECT * FROM users WHERE id=?";
+    $stmt = $dbConnection->prepare($getuser);
+    $stmt->execute([$id]);
+    $newuser = $stmt -> fetch(PDO::FETCH_ASSOC);
+    // $userargs = $idarray+$userargs;
+    echo json_encode($newuser);
+    // echo $id;
+    // $response = array('id' =>);
     // echo "{\"error\": \"".$passwordErr."\"}";
 
  ?>

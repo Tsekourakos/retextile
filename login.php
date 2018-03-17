@@ -1,12 +1,12 @@
 <?php
-    require_once '../login_db.php';
+    require_once './login_db.php';
     // header('Content-Type: application/json');
     // $email = "ilias2@gmail.com" ;
     $email = $_POST['email'];
 
     // $pwd ="1";
     $pwd = $_POST['pwd'];
-    
+
     $loginquery = "SELECT * FROM `login` WHERE `email`= ? AND `password`= ?";
     $args = [$email, $pwd];
     $stmt = $dbConnection->prepare($loginquery);
