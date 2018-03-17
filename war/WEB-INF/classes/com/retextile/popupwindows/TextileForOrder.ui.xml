@@ -1,0 +1,40 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='res' type='com.retextile.resources.RetextileResource' />
+  
+	<g:HTMLPanel ui:field="wholePanel" styleName="{res.style.grey_whole_screen}">
+	<g:Button ui:field="exitBtn" styleName="{res.style.textile_for_order_exit}"></g:Button>
+		<g:HTMLPanel ui:field="container" styleName="{res.style.textile_for_order_container}">
+		<g:HTMLPanel ui:field="menuContainer" styleName="{res.style.textile_for_order_menu_container}">
+			<g:Button ui:field="button1" styleName="{res.style.textile_for_order_menu_buttons}"></g:Button>
+			<g:Button ui:field="button2" styleName="{res.style.textile_for_order_menu_buttons}"></g:Button>
+			<g:Button ui:field="button3" styleName="{res.style.textile_for_order_menu_buttons}"></g:Button>
+			<g:Button ui:field="button4" styleName="{res.style.textile_for_order_menu_buttons}"></g:Button>
+			<g:Button ui:field="button5" styleName="{res.style.textile_for_order_menu_buttons}"></g:Button>
+		</g:HTMLPanel>
+		<g:HTMLPanel ui:field="textileContainer" styleName="{res.style.textile_for_order_textiles_container}"></g:HTMLPanel>
+		
+		<g:HTMLPanel ui:field="specsContainer" styleName="{res.style.textile_for_order_choise_container}">
+			<g:HTMLPanel ui:field="textileSmallImg" styleName="{res.style.textile_for_order_textile_image}"></g:HTMLPanel>
+			<g:Button ui:field="textileExpandBtn" styleName="{res.style.textile_for_order_textile_expand_button}"></g:Button>
+			<g:Label ui:field="expandLbl" styleName="{res.style.textile_for_order_textile_expand_label}"></g:Label>
+			
+			<g:Label ui:field="textileTitleLbl" styleName="{res.style.textile_for_order_title_label}">omg</g:Label>
+			<g:Label ui:field="textileCodeLbl" styleName="{res.style.textile_for_order_code_label}">omg</g:Label>
+			<g:Label ui:field="textileWidthLbl" styleName="{res.style.textile_for_order_width_label}">omg</g:Label>
+			<g:TextBox ui:field="widthTxt" styleName="{res.style.textile_for_order_width_text}"></g:TextBox>
+			<g:Label ui:field="textileHeightLbl" styleName="{res.style.textile_for_order_height_label}">omg</g:Label>
+			<g:TextBox ui:field="heightTxt" styleName="{res.style.textile_for_order_height_text}"></g:TextBox>
+			<g:Label ui:field="textileQuanLbl" styleName="{res.style.textile_for_order_quantity_label}">ΠΟΣΟΤΗΤΑ</g:Label>
+			<g:ListBox ui:field="ddQuantity" styleName="{res.style.textile_for_order_quantity_dropdown}"></g:ListBox>
+			<g:Label ui:field="textileSeamLbl" styleName="{res.style.textile_for_order_seam_label}">omg</g:Label>
+			<g:HTMLPanel styleName="{res.style.textile_for_order_seams_container}"></g:HTMLPanel>
+			
+			<g:Button ui:field="addToBasket" styleName="{res.style.textile_for_order_addtobasket}"></g:Button>
+			<g:Button ui:field="addToFavourite" styleName="{res.style.textile_for_order_addtofavourite}"></g:Button>
+		</g:HTMLPanel>
+		
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

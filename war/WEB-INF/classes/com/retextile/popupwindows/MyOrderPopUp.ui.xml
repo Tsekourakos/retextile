@@ -1,0 +1,35 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='res' type='com.retextile.resources.RetextileResource' />
+
+	
+	<g:HTMLPanel ui:field="wholeScreen" styleName="{res.style.grey_whole_screen}">
+		<g:Button ui:field="exitBtn" styleName="{res.style.textile_for_order_exit}"></g:Button>
+			<g:HTMLPanel ui:field="container" styleName="{res.style.textile_for_order_container}">
+			<g:HTMLPanel ui:field="menuContainer" styleName="{res.style.textile_for_order_menu_container}">
+				<g:Button ui:field="button1" styleName="{res.style.textile_for_order_menu_buttons}"></g:Button>
+				<g:Button ui:field="button2" styleName="{res.style.textile_for_order_menu_buttons}"></g:Button>
+				<g:Button ui:field="button3" styleName="{res.style.textile_for_order_menu_buttons}"></g:Button>
+				<g:Button ui:field="button4" styleName="{res.style.textile_for_order_menu_buttons}"></g:Button>
+			</g:HTMLPanel>
+			<g:HTMLPanel ui:field="labelsContainer" styleName="{res.style.textile_for_order_labels_container}">
+				<g:Label ui:field="productLbl" styleName="{res.style.textile_for_order_label_product}"></g:Label>
+				<g:Label ui:field="dimensionLbl" styleName="{res.style.textile_for_order_label_dimension}"></g:Label>
+				<g:Label ui:field="quantityLbl" styleName="{res.style.textile_for_order_label_quantity}"></g:Label>
+				<g:Label ui:field="priceLbl" styleName="{res.style.textile_for_order_label_price}"></g:Label>
+			</g:HTMLPanel>
+			<g:HTMLPanel ui:field="textileContainer" styleName="{res.style.my_basket_orders_container}">
+			
+			</g:HTMLPanel>
+			<g:HTMLPanel ui:field="asddsf" styleName="{res.style.my_basket_info_container}">
+				<g:Label ui:field="infoLabel1" styleName="{res.style.my_basket_info_label1}"></g:Label>
+				<g:Label ui:field="infoLabel2" styleName="{res.style.my_basket_info_label2}"></g:Label>
+				<g:Label ui:field="infoLabel3" styleName="{res.style.my_basket_info_label3}"></g:Label>
+				<g:Label ui:field="infoLabel4" styleName="{res.style.my_basket_info_label4}"></g:Label>
+				<g:Button ui:field="shoppingCnt" styleName="{res.style.my_basket_info_shopping}"></g:Button>
+				<g:Button ui:field="nextStp" styleName="{res.style.my_basket_info_next}"></g:Button>
+			</g:HTMLPanel>
+		</g:HTMLPanel>	
+	</g:HTMLPanel>
+</ui:UiBinder> 

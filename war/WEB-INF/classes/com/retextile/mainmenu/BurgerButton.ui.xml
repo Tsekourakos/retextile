@@ -1,0 +1,18 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='res' type='com.retextile.resources.RetextileResource' />
+
+	<g:HTMLPanel ui:field="wholeScreen"
+		styleName="{res.style.burger_button_whole_screen}">
+		<g:HTMLPanel styleName="{res.style.burger_button_container}">
+			<g:Button ui:field="myProfile" styleName="{res.style.burger_buttons}"></g:Button>
+			<g:Button ui:field="bestChoises" styleName="{res.style.burger_buttons}"></g:Button>
+			<g:Button ui:field="theFirm" styleName="{res.style.burger_buttons}"></g:Button>
+			<g:Button ui:field="shippingMeth" styleName="{res.style.burger_buttons}"></g:Button>
+			<g:Button ui:field="paymentMeth" styleName="{res.style.burger_buttons}"></g:Button>
+			<g:Button ui:field="contactUs" styleName="{res.style.burger_buttons}"></g:Button>
+		</g:HTMLPanel>
+		<g:Button ui:field="exitBtn" styleName="{res.style.burger_button_exit_button}"></g:Button>
+	</g:HTMLPanel>
+</ui:UiBinder> 

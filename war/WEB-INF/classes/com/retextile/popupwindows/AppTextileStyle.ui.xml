@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='res' type='com.retextile.resources.RetextileResource' />
+
+	<g:HTMLPanel ui:field="textileStyleContainer" styleName="{res.style.app_style_container}">
+		<g:Button ui:field="modernBtn" styleName="{res.style.app_style_button}"></g:Button>
+		<g:Button ui:field="classicsBtn" styleName="{res.style.app_style_button}"></g:Button>
+		<g:Button ui:field="stripedBtn" styleName="{res.style.app_style_button}"></g:Button>
+		<g:Button ui:field="chintzBtn" styleName="{res.style.app_style_button}"></g:Button>
+		<g:Button ui:field="allBtn" styleName="{res.style.app_style_button}"></g:Button>
+	</g:HTMLPanel>
+</ui:UiBinder> 

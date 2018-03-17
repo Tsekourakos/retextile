@@ -1,0 +1,20 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='res' type='com.retextile.resources.RetextileResource' />
+
+	<g:HTMLPanel ui:field="wholeScreen" styleName="{res.style.whole_screen}">
+	    <g:HTMLPanel ui:field="PanelContainer" styleName="{res.style.my_prof_container}"></g:HTMLPanel>
+	    
+	    <g:HTMLPanel ui:field="buttonsCntainer" styleName="{res.style.my_prof_buttons_container}">
+	    	<g:Button ui:field="signInBtn" styleName="{res.style.my_prof_sing_in_button}"></g:Button>
+	    	<g:Button ui:field="registerBtn" styleName="{res.style.my_prof_register_button}"></g:Button>
+	    	<g:Button ui:field="myProfBtn" styleName="{res.style.my_prof_profile_button}"></g:Button>
+	    	<g:Button ui:field="profEditBtn" styleName="{res.style.my_prof_edit_button}"></g:Button>
+	    	<g:Button ui:field="myFavouriteBtn" styleName="{res.style.my_prof_my_favourite_button}"></g:Button>
+	    	<g:Button ui:field="myPreviewBtn" styleName="{res.style.my_prof_my_preview_button}"></g:Button>
+	    	
+	    	<g:HTMLPanel ui:field="fieldsContainer" styleName="{res.style.my_prof_fields_container}"></g:HTMLPanel>
+	    </g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

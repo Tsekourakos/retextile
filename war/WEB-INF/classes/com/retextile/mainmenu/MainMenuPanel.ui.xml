@@ -1,0 +1,101 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='res' type='com.retextile.resources.RetextileResource' />
+	<g:HTMLPanel ui:field="wholeScreen" styleName="{res.style.whole_screen}">
+		<g:HTMLPanel styleName="{res.style.heade_container}">
+			<g:HTMLPanel styleName="{res.style.heade_container_left}">
+				<g:Button ui:field="burgerBtn" styleName="{res.style.burger_button}"></g:Button>
+				<g:Button styleName="{res.style.login_button}">LOG IN</g:Button>
+				<g:Button ui:field="basketBtn" styleName="{res.style.basket_button}"></g:Button>
+				<g:TextArea styleName="{res.style.search_bar}"></g:TextArea>
+			</g:HTMLPanel>
+
+			<g:HTMLPanel ui:field="headerWallpaper" styleName="{res.style.heade_container_right}">
+				<g:HTMLPanel styleName="{res.style.image_button_container}">
+					<g:Button ui:field="wallpaperBtn1" styleName="{res.style.image_button}"></g:Button>
+					<g:Button ui:field="wallpaperBtn2" styleName="{res.style.image_button}"></g:Button>
+					<g:Button ui:field="wallpaperBtn3" styleName="{res.style.image_button}"></g:Button>
+				</g:HTMLPanel>
+			</g:HTMLPanel>
+		</g:HTMLPanel>
+
+		<g:HTMLPanel ui:field="menuContainer" styleName="{res.style.menu_container}">
+			<g:Button ui:field="menuBtn1" styleName="{res.style.menu_button}"></g:Button>
+			<g:Button ui:field="menuBtn2" styleName="{res.style.menu_button}"></g:Button>
+			<g:Button ui:field="menuBtn3" styleName="{res.style.menu_button}"></g:Button>
+			<g:Button ui:field="menuBtn4" styleName="{res.style.menu_button}"></g:Button>
+			<g:Button ui:field="menuBtn5" styleName="{res.style.menu_button}"></g:Button>
+		</g:HTMLPanel>
+
+		<!-- <g:HTMLPanel styleName="{res.style.the_places_container}">
+			left side
+			<g:Label ui:field="placeTitle" styleName="{res.style.places_label_title}"></g:Label>
+			<g:Label ui:field="placeParagraph" styleName="{res.style.places_label_paragraph}"></g:Label>
+
+			right side
+			<g:HTMLPanel styleName="{res.style.places_image} {res.style.place1}"></g:HTMLPanel>
+			<g:HTMLPanel styleName="{res.style.places_image} {res.style.place2}"></g:HTMLPanel>
+			<g:HTMLPanel styleName="{res.style.places_image} {res.style.place3}"></g:HTMLPanel>
+			<g:HTMLPanel styleName="{res.style.places_image} {res.style.place4}"></g:HTMLPanel>
+		</g:HTMLPanel>the_places_container End! -->
+
+		<g:HTMLPanel styleName="{res.style.quality_container}">
+			<!-- Quality left -->
+			<g:HTMLPanel styleName="{res.style.quality_image}"></g:HTMLPanel>
+
+			<!-- Quality right -->
+			<g:Label ui:field="qualityTitle" styleName="{res.style.quality_label_title}"></g:Label>
+			<g:Label ui:field="qualityParagraph" styleName="{res.style.quality_label_paragraph}"></g:Label>
+		</g:HTMLPanel><!-- quality_container End! -->
+
+		<g:HTMLPanel ui:field="recentProducts" styleName="{res.style.recent_products_container}">
+			<g:Label ui:field="recentProductsTitle" styleName="{res.style.recent_product_title}"></g:Label>
+			<g:HTMLPanel ui:field="recentProductsContainer" styleName="{res.style.recent_textile_container}">
+				<!-- here add the recent product of the user -->
+			</g:HTMLPanel>
+
+			<g:HTMLPanel ui:field="pageNavigationContainer" styleName="{res.style.page_navigation_container}">
+				<g:Button ui:field="nextPage" styleName="{res.style.next_page_navigation}"></g:Button>
+				<!-- here add the numbers -->
+				<g:Button ui:field="previouwsPage" styleName="{res.style.previous_page_navigation}"></g:Button>
+			</g:HTMLPanel>
+		</g:HTMLPanel><!-- recent_products_container End! -->
+
+		<g:HTMLPanel styleName="{res.style.social_button_container}">
+			<g:Button styleName="{res.style.social_button} {res.style.facebook}"></g:Button>
+			<g:Button styleName="{res.style.social_button} {res.style.twitter}"></g:Button>
+			<g:Button styleName="{res.style.social_button} {res.style.pinterest}"></g:Button>
+		</g:HTMLPanel><!-- social_button_container End! -->
+
+		
+		<g:HTMLPanel styleName="{res.style.company_info_container}">
+			<g:Button ui:field="orderCmp" styleName="{res.style.company_info_order_button}"></g:Button>
+			<g:Label ui:field="orderCmpLabel" styleName="{res.style.company_buttons_label_left}"></g:Label>		
+			
+			<g:Button ui:field="paymentCmp" styleName="{res.style.company_info_payment_button}"></g:Button>		
+			<g:Label ui:field="paymentCmpLabel" styleName="{res.style.company_buttons_labe_center}"></g:Label>
+			
+			<g:Button ui:field="shippingCmp" styleName="{res.style.company_info_shipping_button}"></g:Button>		
+			<g:Label ui:field="shippingCmpLabel" styleName="{res.style.company_buttons_label_right}"></g:Label>
+			
+		</g:HTMLPanel>
+		
+		<g:HTMLPanel styleName="{res.style.contact_us_container}">
+			<g:Label ui:field="contactTitle" styleName="{res.style.contact_us_title_labe}"></g:Label>
+			<g:Label ui:field="contactText" styleName="{res.style.contact_us_text_label}"></g:Label>
+			<g:Label ui:field="contactPhone" styleName="{res.style.contact_us_phone_label}"></g:Label>
+			
+			<g:TextArea ui:field="emailName" styleName="{res.style.contact_us_username_text}"></g:TextArea>
+			<g:TextArea ui:field="email" styleName="{res.style.contact_us_email_text}"></g:TextArea>
+			<g:TextArea ui:field="emailBody" styleName="{res.style.contact_us_bodytext_text}"></g:TextArea>
+			
+			<g:Button ui:field="emailSend" styleName="{res.style.contact_us_send_button}"></g:Button>
+		
+		</g:HTMLPanel>
+
+
+		<g:HTMLPanel styleName="{res.style.under_bar}"></g:HTMLPanel>
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

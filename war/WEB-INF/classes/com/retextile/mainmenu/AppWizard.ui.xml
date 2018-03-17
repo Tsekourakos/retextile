@@ -1,0 +1,44 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field='res' type='com.retextile.resources.RetextileResource' />
+	<ui:style>
+  		.top0 {top: 0vh;}
+  		.top1 {top: 20vh;}
+  		.top2 {top: 40vh;}
+  		.top3 {top: 60vh;}
+   	</ui:style>
+
+	<g:HTMLPanel ui:field="appContainer" styleName="{res.style.app_container}">
+		<g:HTMLPanel ui:field="appPlacesContainer" styleName="{res.style.app_places_container}">
+			<g:HTMLPanel ui:field="appDinigPanel" styleName="{res.style.app_place_button} {style.top0}"></g:HTMLPanel>
+				<g:Button ui:field="appDinigBtn" styleName="{res.style.app_kitchenroom_button} {style.top0}"></g:Button>
+			<g:HTMLPanel ui:field="appLivingPanel" styleName="{res.style.app_place_button} {style.top1}"></g:HTMLPanel>
+				<g:Button ui:field="appLivingBtn" styleName="{res.style.app_diningroom_button} {style.top1}"></g:Button>
+			<g:HTMLPanel ui:field="appBedPanel" styleName="{res.style.app_place_button} {style.top2}"></g:HTMLPanel>
+				<g:Button ui:field="appBedBtn" styleName="{res.style.app_bedroom_button} {style.top2}"></g:Button>
+			<g:HTMLPanel ui:field="appChildPanel" styleName="{res.style.app_place_button} {style.top3}"></g:HTMLPanel>
+				<g:Button ui:field="appChildBtn" styleName="{res.style.app_childroom_button} {style.top3}"></g:Button>
+		</g:HTMLPanel><!-- app_places_container End! -->
+
+		<g:HTMLPanel ui:field="textileContainer" styleName="{res.style.app_textile_container}">
+			<!-- here adding the textiles -->
+			<g:Button ui:field="textileNext" styleName="{res.style.app_textile_button_next}"></g:Button>
+		</g:HTMLPanel><!-- app_textile_container End! -->
+		<!-- CURTAIN, PILLOW, WITH_METRE, THROW, TABLECLOTHS, COUCH -->
+		<g:HTMLPanel ui:field="appPreview" styleName="{res.style.app_preview_conatiner}">
+			<g:HTMLPanel ui:field="withmetterWallPrevie"></g:HTMLPanel>
+			<g:HTMLPanel ui:field="curtainPrevie"></g:HTMLPanel>
+			<g:HTMLPanel ui:field="tableclothPrevie"></g:HTMLPanel>
+			<g:HTMLPanel ui:field="throwPrevie"></g:HTMLPanel>
+			<g:HTMLPanel ui:field="pillowPrevie"></g:HTMLPanel>
+			<!-- here adding the buttons that will change the textiles -->
+		</g:HTMLPanel><!-- app_preview_conatiner End! -->
+
+		<g:Label ui:field="chosseTextileLabel" styleName="{res.style.app_choose_textile_label}"></g:Label>
+		<g:HTMLPanel ui:field="appUnderPrevieCnt" styleName="{res.style.app_under_preview_container}">
+			<g:Button ui:field="saveToFavourite" styleName="{res.style.app_save_previe_button}"></g:Button>
+			<g:Button ui:field="buyCheckTectile" styleName="{res.style.app_textile_to_buy}"></g:Button>
+		</g:HTMLPanel><!-- app_under_preview_container End! -->
+	</g:HTMLPanel>
+</ui:UiBinder> 
