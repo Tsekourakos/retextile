@@ -4,9 +4,6 @@
     require_once './login_db.php';
     $name = (isset($_POST['name']) ? $_POST['name'] : "");
     $surname = (isset($_POST['surname']) ? $_POST['surname'] : "");
-    $address = (isset($_POST['address']) ? $_POST['address'] : "");
-    $zip_code = (isset($_POST['zip_code']) ? $_POST['zip_code'] : "");
-    $afm = (isset($_POST['afm']) ? $_POST['afm'] : "");
     $email = (isset($_POST['email']) ? $_POST['email'] : "");
     $pwd = (isset($_POST['pwd']) ? $_POST['pwd'] : "");
     $pwd2 = (isset($_POST['pwd2']) ? $_POST['pwd2'] : "");
@@ -50,9 +47,9 @@
         exit;
     }
 
-    $createuser = "INSERT INTO users(name, surname, address, zip_code, afm) VALUES (?, ?, ?, ?, ? )";
+    $createuser = "INSERT INTO users(name, surname) VALUES (?, ?)";
     $stmt = $dbConnection->prepare($createuser);
-    $userargs = [$name, $surname, $address, $zip_code, $afm];
+    $userargs = [$name, $surname];
     $stmt->execute($userargs);
     $id = $dbConnection->lastInsertId();
 
